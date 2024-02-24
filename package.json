@@ -1,0 +1,15 @@
+{
+  "name": "basichttpserevr",
+  "version": "1.0.0",
+  "description": "Creating basic http server using in-build http module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "VISHNU",
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
