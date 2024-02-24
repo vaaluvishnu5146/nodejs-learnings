@@ -28,3 +28,21 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/ happily`);
 });
+
+// try {
+//   const files = fs.readdirSync("./logs");
+//   console.log(files);
+//   res.statusCode = 200;
+//   res.setHeader("Content-Type", "text/html");
+//   res.end(`<html>
+//             <head>
+//             <title>Result</title>
+//             </head>
+//             <body>
+//             <h1>File reading success</h1>
+//             </body>
+//                 </html >`);
+// } catch (err) {
+//   // Handle the error
+//   console.log(err);
+// }
