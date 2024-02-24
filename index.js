@@ -32,24 +32,6 @@ const server = http.createServer((req, res) => {
             </body>
                 </html >`);
       break;
-    case "/test":
-      try {
-        fs.appendFileSync("message.txt", "data to append");
-        res.statusCode = 200;
-        res.setHeader("Content-Type", "text/html");
-        res.end(`<html>
-            <head>
-            <title>Result</title>
-            </head>
-            <body>
-            <h1>File creation successful</h1>
-            </body>
-                </html >`);
-      } catch (err) {
-        // Handle the error
-        console.log(err);
-      }
-      break;
     default:
       res.statusCode = 404;
       res.setHeader("Content-Type", "text/html");
