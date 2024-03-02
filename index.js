@@ -6,7 +6,7 @@ const bodyparser = require("body-parser");
 APP_SERVER.set("view engine", "ejs");
 APP_SERVER.use(bodyparser.json());
 
-const hostname = "127.0.0.1";
+const hostname = "0.0.0.0";
 const port = 3000;
 
 APP_SERVER.use("/", require("./webserver"));
