@@ -12,7 +12,10 @@
         <p>Welcome to templating using EJS</p>
       </div>
     </main>
-
-    <%- include('../partials/footer'); %>
+    <div class="row">
+      <% data.forEach((blog) => { %> <%- include('../partials/blogcard', {blog:
+      blog }); %> <% }); %>
+    </div>
+    <%-include('../partials/footer'); %>
   </body>
 </html>

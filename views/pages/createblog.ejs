@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="container">
+    <%- include('../partials/header'); %>
+
+    <main>
+      <div class="p-5 mb-4 bg-light rounded-3">
+        <h1>Create Blog</h1>
+        <p>Welcome to Blog creation tool</p>
+      </div>
+    </main>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="blogName" class="form-label">Enter Blog Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="blogName"
+              placeholder="Blog Name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="blogType" class="form-label">Blog Category</label>
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              id="blogCategory"
+            >
+              <option selected>Select Category</option>
+              <option value="software engineering">Software Engineering</option>
+              <option value="manufacturing">Manufacturing</option>
+              <option value="science">Science</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="blogDetails" class="form-label">Blog Details</label>
+            <textarea class="form-control" id="blogDetails" rows="3"></textarea>
+          </div>
+          <button type="button" class="btn btn-primary" id="createBlog">
+            Create Blog
+          </button>
+        </div>
+      </div>
+    </div>
+    <%-include('../partials/footer'); %>
+    <script src="./createblog.js"></script>
+  </body>
+</html>
