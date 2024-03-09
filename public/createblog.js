@@ -1,5 +1,4 @@
 const submitButton = document.getElementById("createBlog");
-
 // Adding event listener to submit button
 submitButton.addEventListener("click", createBlog);
 
@@ -9,7 +8,7 @@ function createBlog() {
   const blogCategory = document.getElementById("blogCategory").value;
 
   if (blogName && blogDetails && blogCategory) {
-    fetch("https://nodejs-learnings.onrender.com/api/blogs/create", {
+    fetch(`${window.location.origin}/api/blogs/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
