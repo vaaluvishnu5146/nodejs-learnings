@@ -18,13 +18,10 @@ APP_SERVER.use(cors());
 APP_SERVER.use(express.static("public"));
 
 const hostname =
-  process.env.NODE_ENVIRONMENT === "development"
-    ? process.env.DEV_SERVER_HOSTNAME
+  process.env.NODE_ENV === "development"
+    ? "localhost"
     : process.env.PROD_SERVER_HOSTNAME;
-const port =
-  process.env.NODE_ENVIRONMENT === "development"
-    ? process.env.DEV_SERVER_PORT
-    : process.env.PROD_SERVER_PORT;
+const port = process.env.NODE_ENV === "development" ? 3000 : process.env.PORT;
 
 APP_SERVER.use("/", require("./webserver"));
 APP_SERVER.use("/api", require("./app"));
