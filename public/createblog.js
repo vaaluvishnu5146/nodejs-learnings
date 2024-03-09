@@ -9,7 +9,7 @@ function createBlog() {
   const blogCategory = document.getElementById("blogCategory").value;
 
   if (blogName && blogDetails && blogCategory) {
-    fetch("http://127.0.0.1:3000/api/blogs/create", {
+    fetch("https://nodejs-learnings.onrender.com/api/blogs/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
