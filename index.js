@@ -1,10 +1,14 @@
 const express = require("express");
 const APP_SERVER = express();
 const bodyparser = require("body-parser");
+const cors = require("cors");
 
 // INJECT VIEW ENGINE
 APP_SERVER.set("view engine", "ejs");
 APP_SERVER.use(bodyparser.json());
+
+// ENABLE CORS
+APP_SERVER.use(cors());
 
 APP_SERVER.use(express.static("public"));
 
