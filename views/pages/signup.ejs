@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body>
+    <main class="auth-page-container">
+      <div class="card" style="width: 350px">
+        <div class="card-body">
+          <h2 class="mb-3">Create Account</h2>
+          <div class="mb-3">
+            <label for="name" class="form-label">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter Username"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="name@example.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="**********"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="confirmPassword" class="form-label"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="confirmPassword"
+              placeholder="**********"
+            />
+          </div>
+          <button class="btn btn-primary" id="createAccount">
+            Create Account
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="./createUser.js"></script>
+  </body>
+</html>

@@ -5,7 +5,6 @@ function connectToMongoDB() {
     process.env.NODE_ENV === "development"
       ? "mongodb://localhost:27017/mediumclone"
       : `mongodb+srv://${process.env.MONGODB_NAME}:${process.env.MONGODB_PASSWORD}@blogsmaster.2b0jkhx.mongodb.net/`;
-  console.log("DB URI", DATABASE_URI);
   mongoose
     .connect(DATABASE_URI)
     .then((response) => {

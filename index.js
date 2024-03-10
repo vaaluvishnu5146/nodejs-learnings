@@ -6,7 +6,6 @@ const dotenv = require("dotenv");
 
 // CONFIGURE ENVIRONMENT VARIABLES
 dotenv.config();
-console.log(process.env);
 
 // INJECT VIEW ENGINE
 APP_SERVER.set("view engine", "ejs");

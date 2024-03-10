@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body>
+    <main class="auth-page-container">
+      <div class="card" style="width: 350px">
+        <div class="card-body">
+          <h2 class="mb-3">Login To Account</h2>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="name@example.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="**********"
+            />
+          </div>
+          <button class="btn btn-primary" id="signin">Sign In</button>
+        </div>
+      </div>
+    </main>
+    <script src="./createUser.js"></script>
+  </body>
+</html>
