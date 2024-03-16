@@ -7,7 +7,6 @@ const BlogRouter = require("express").Router();
  */
 BlogRouter.get("/", async (req, res) => {
   let blogs;
-  console.log(req);
   try {
     blogs = await getAllBlogs(req, res);
   } catch (error) {

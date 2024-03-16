@@ -1,3 +1,4 @@
+var jwt = require("jsonwebtoken");
 const { createAUser, loginUser } = require("../Controllers/Auth.controller");
 const { getAllBlogs } = require("../Controllers/Blogs.controller");
 
@@ -34,13 +35,28 @@ AuthRouter.post("/signin", async (req, res) => {
     const matchedUser = await loginUser(req, res);
     if (matchedUser && matchedUser._id) {
       if (matchedUser.password === req.body.password) {
-        res.cookie("user", matchedUser._id, {
-          maxAge: 900000,
-          httpOnly: false,
-        });
         try {
-          // const blogs = await getAllBlogs();
-          return res.redirect(301, "/blogs");
+          const TOKEN = jwt.sign(
+            {
+              subscriptionId: 0,
+              role: ["user", "mentor"],
+            },
+            process.env.JWT_SECRET,
+            {
+              expiresIn: 60 * 2,
+              algorithm: "HS256",
+            }
+          );
+          return res.status(200).json({
+            success: true,
+            token: TOKEN,
+            message: "Login Successful!",
+          });
+          // res.cookie("user", matchedUser._id, {
+          //   maxAge: 900000,
+          //   httpOnly: false,
+          // });
+          // res.redirect("https://www.google.com");
         } catch (error) {
           console.log(error);
         }
